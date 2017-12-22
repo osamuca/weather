@@ -1,0 +1,20 @@
+<p>
+  home works!
+</p>
+
+
+<h1>Search color</h1>
+<ng2-completer
+  [(ngModel)]="city"
+  [dataService]="dataRemote"
+  [minSearchLength]="3"
+  [placeholder]="'Search for country'"
+  [clearSelected]="true"
+  (selected)="onSelected($event)"
+  [inputClass]="'form-control'"
+  [textSearching]="'Please wait...'"
+  [autofocus]="true"
+  >
+</ng2-completer>
+{{city}}
+<div [innerHTML]="data | json"></div>
